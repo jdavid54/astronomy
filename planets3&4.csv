@@ -1,0 +1,24 @@
+0,3,4
+Nom de la planète,Terre,Mars
+Nombre de satellites,1,2
+Demi-grand axe en unités astronomiques,1.0000010,1.5236793
+Demi-grand axe en millions de km,149.5980,227.9392
+Excentricité de l'orbite,0.01671,0.09340
+Inclinaison de l'orbite sur l'écliptique,0°,1°.8497
+Inclinaison de l'équateur sur l'écliptique,23.44°,25.19°
+Période de révolution sidérale,365.256 jr,1 an et 321.730 jr
+Période de rotation,23.935 h,24.62 h
+Diamètre apparent équatorial  maximal,,"25.7"""
+Diamètre équatorial (Terre=1),1,0.5326
+Diamètre équatorial  en km,12756.28,6794
+Aplatissement,1/298.257,1/154
+Volume (Terre=1),1,0.15
+Masse (Soleil=1),1/332946.05,1/3098708
+Masse (Terre=1),1,0.107
+Masse (kg),5.9736.1024,6.4185.1023
+Masse (kg) planète+satellites,6.0471.1024,6.4185.1023
+Densité (Terre=1),1,0.71
+Densité (Eau=1),5.515,3.93
+Pesanteur à la surface (Terre=1),1,0.38
+Diamètre apparent du Soleil vu de la planète,32',21'
+Magnitude du Soleil vu de la planète,-26.8,-25.9

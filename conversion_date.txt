@@ -1,0 +1,96 @@
+
+'''
+What does the Chinese year look like?
+The Chinese calendar – like the Hebrew – is a combined solar/lunar calendar in that it strives to have its years coincide
+with the tropical year and its months coincide with the synodic months. It is not surprising that a few similarities exist
+between the Chinese and the Hebrew calendar:
+
+An ordinary year has 12 months, a leap year has 13 months.
+An ordinary year has 353, 354, or 355 days, a leap year has 383, 384, or 385 days.
+When determining what a Chinese year looks like, one must make a number of astronomical calculations:
+
+First, determine the dates for the new moons. Here, a new moon is the completely “black” moon (that is, when the moon is in
+conjunction with the sun), not the first visible crescent used in the Islamic and Hebrew calendars. 
+The date of a new moon is the first day of a new month.
+
+Secondly, determine the dates when the sun’s longitude is a multiple of 30 degrees. (The sun’s longitude is 0 at Vernal Equinox,
+90 at Summer Solstice, 180 at Autumnal Equinox, and 270 at Winter Solstice.) These dates are called the Principal Terms and
+are used to determine the number of each month:
+
+Principal Term 1 occurs when the sun’s longitude is 330 degrees.
+Principal Term 2 occurs when the sun’s longitude is 0 degrees.
+Principal Term 3 occurs when the sun’s longitude is 30 degrees.
+... etc.
+Principal Term 11 occurs when the sun’s longitude is 270 degrees.
+Principal Term 12 occurs when the sun’s longitude is 300 degrees.
+
+Each month carries the number of the Principal Term that occurs in that month.
+In rare cases, a month may contain two Principal Terms; in this case the months numbers may have to be shifted.
+Principal Term 11 (Winter Solstice) must always fall in the 11th month.
+All the astronomical calculations are carried out for the meridian 120 degrees east of Greenwich.
+This roughly corresponds to the east coast of China.
+Some variations in these rules are seen in various Chinese communities.
+
+===== What years are leap years? =====
+Leap years have 13 months. To determine if a year is a leap year, calculate the number of new moons between the 11th month
+in one year (i.e., the month containing the Winter Solstice) and the 11th month in the following year. If there are 13 new moons
+from the start of the 11th month in the first year to the start of the 11th month in the second year, a leap month must be inserted.
+
+In leap years, at least one month does not contain a Principal Term. The first such month is the leap month.
+It carries the same number as the previous month, with the additional note that it is the leap month.
+
+===== How does one count years? =====
+Unlike most other calendars, the Chinese calendar does not count years in an infinite sequence. Instead years have names
+that are repeated every 60 years. (Historically, years used to be counted since the accession of an emperor, but this was abolished after the 1911 revolution.)
+Within each 60-year cycle, each year is assigned a name consisting of two components:
+
+The first component is a Celestial Stem:
+('Giáp', 'Ất', 'Bính', 'Đinh', 'Mậu', 'Kỷ', 'Canh', 'Tân', 'Nhâm', 'Quý')
+1.	jiǎ	(Giap)       6.	jǐ (Ky)
+2.	yǐ (At)          7.	gēng (Canh)
+3.	bǐng (Binh)      8.	xīn (Tân)
+4.	dīng (Dinh)      9.	rén (Nhâm)
+5.	wù (Mau)        10.	guǐ (Quy')
+These words have no English equivalent.
+
+The second component is a Terrestrial Branch:
+('Tý', 'Sửu', 'Dần', 'Mão', 'Thìn', 'Tỵ', 'Ngọ', 'Mùi', 'Thân', 'Dậu', 'Tuất', 'Hợi')
+1.	zǐ (rat)	            7.	wǔ (horse)
+2.	chǒu (ox)	            8.	wèi (sheep)
+3.	yín (tiger)	            9.	shēn (monkey)
+4.	mǎo (hare, rabbit)	   10.	yǒu (rooster)
+5.	chén(dragon)	       11.	xū (dog)
+6.	sì (snake)	           12.	hài (pig)
+The names of the corresponding animals in the zodiac cycle of 12 animals are given in parentheses.
+
+Each of the two components is used sequentially. Thus, the 1st year of the 60-year cycle becomes jiǎ-zǐ,
+the 2nd year is yǐ-chǒu, the 3rd year is bǐng-yín, etc. When we reach the end of a component, we start from
+the beginning: The 10th year is guǐ-yǒu, the 11th year is jiǎ-xū (restarting the Celestial Stem), the 12th year
+is yǐ-hài, and the 13th year is bǐng-zǐ (restarting the Terrestrial Branch). Finally, the 60th year becomes guǐ-hài.
+
+This way of naming years within a 60-year cycle goes back approximately 2000 years. A similar naming of days and
+months has fallen into disuse, but the date name is still listed in calendars.
+
+It is customary to number the 60-year cycles since 2637 BC, when the calendar was supposedly invented, or since 2697 BC,
+sixty years earlier, when the reign of Emperor Huang-di began. In one of those years the first 60-year cycle started,
+which means that we are currently in the 78th or 79th sixty-year cycle.
+
+===== What is the current year in the Chinese calendar? =====
+The current 60-year cycle started on 2 February 1984 (?? 1986). That date bears the name bǐng-yín (Bính Dần) in the 60-day cycle,
+and the first month of that first year bears the name bǐng-yín in the 60-month cycle.
+
+This means that the year xīn-chǒu (Tân Sửu), the 38th year in the current cycle, started on 12 February 2021.
+
+The year rén-yín (Nhâm Dần), the 39th year in the current cycle, will start on 1 February 2022.
+'''
+CAN = ("Gi\341p", "\u1EA4t", "B\355nh", "\u0110inh", "M\u1EADu", "K\u1EF7", "Canh", "T\342n", "Nh\342m", "Qu\375");
+CHI = ("T\375", "S\u1EEDu", "D\u1EA7n", "M\343o", "Th\354n", "T\u1EF5", "Ng\u1ECD", "M\371i", "Th\342n", "D\u1EADu", "Tu\u1EA5t", "H\u1EE3i");
+
+def getYearCanChi(year):
+    return CAN[(year+6) % 10] + " " + CHI[(year+8) % 12];
+    
+canchi = getYearCanChi(1984)
+print(canchi)
+
+for k in range(60):
+    print(k+1, 1984+k, getYearCanChi(1954+k), end=' / ')
